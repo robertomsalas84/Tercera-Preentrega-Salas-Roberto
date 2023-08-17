@@ -1,0 +1,20 @@
+{% extends 'clientes/base.html' %}
+{% load static %}
+
+{% block titulo %}
+    <h1>Agregar Sucursal</h1>
+{% endblock titulo %}
+
+{% block contenido %}
+    <h2>Agregar Sucursal</h2>
+    <form method="post" action="">
+        {% csrf_token %}
+        <table>
+            {{form.as_table}}
+        </table>
+        <input type="submit" value="Grabar">
+
+    </form>
+</body>
+</html>
+{% endblock contenido %}

@@ -1,0 +1,16 @@
+{% extends 'clientes/base.html' %}
+{% load static %}
+
+{% block titulo %}
+    <h1>Buscar Cliente por Nombre</h1>
+{% endblock titulo %}
+
+{% block contenido %}
+    <h2>Buscar Cliente por Nombre</h2>
+    <form method="get" action="/buscar2">
+        {% csrf_token %}
+        <p>Buscar Cliente <input type="text" name="buscar" id="buscar"> </p>
+        <input type="submit" value="Enviar">
+
+    </form>
+{% endblock contenido %}

@@ -1,0 +1,20 @@
+{% extends 'clientes/base.html' %}
+{% load static %}
+
+{% block titulo %}
+    <h1>Producto</h1>
+{% endblock titulo %}
+
+{% block contenido %}
+    <h2>Agregar producto</h2>
+    <form method="post" action="">
+        {% csrf_token %}
+        <p>Producto <input type="text" name="producto" id="producto"> </p>
+        <p>Meses de Garantía <input type="text" name="meses_garantia" id="meses_garantia"> </p>
+        <p>Promoción <input type="button" name="promocion" id="promocion"> </p>
+        <input type="submit" value="Grabar">
+
+    </form>
+</body>
+</html>
+{% endblock contenido %}

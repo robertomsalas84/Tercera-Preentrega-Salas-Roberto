@@ -1,0 +1,33 @@
+{% extends 'clientes/base.html' %}
+{% load static %}
+
+{% block titulo %}
+    <h1>CLIENTES</h1>
+{% endblock titulo %}
+
+{% block contenido %}
+    <h1>Clientes</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>DNI</th>
+                <th>Ciudad</th>
+                <th>E-mail</th>
+            </tr>
+        </thead>
+        <tbody>
+    {% for c in clientes %}
+            <tr>
+                <td>{{c.id }}</td>
+                <td>{{c.nombre }}</td>
+                <td>{{c.dni }}</td>
+                <td>{{c.ciudad }}</td>
+                <td>{{c.email }}</td>
+            </tr>
+    {% endfor %}
+        </tbody>
+    </table>
+{% endblock contenido %}

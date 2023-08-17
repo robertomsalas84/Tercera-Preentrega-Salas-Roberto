@@ -1,0 +1,21 @@
+{% extends 'clientes/base.html' %}
+{% load static %}
+
+{% block titulo %}
+    <h1>HOME</h1>
+{% endblock titulo %}
+
+{% block contenido %}
+    <h2>Agregar cliente</h2>
+    <form method="post" action="">
+        {% csrf_token %}
+        <p>Cliente <input type="text" name="nombre" id="nombre"> </p>
+        <p>Dni <input type="number" name="dni" id="dni"> </p>
+        <p>Ciudad <input type="text" name="ciudad" id="ciudad"> </p>
+        <p>Email <input type="text" name="email" id="email"> </p>
+        <input type="submit" value="Grabar">
+
+    </form>
+</body>
+</html>
+{% endblock contenido %}

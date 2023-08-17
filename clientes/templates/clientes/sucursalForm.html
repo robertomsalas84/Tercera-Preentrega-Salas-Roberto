@@ -1,0 +1,20 @@
+{% extends 'clientes/base.html' %}
+{% load static %}
+
+{% block titulo %}
+    <h1>Sucursal</h1>
+{% endblock titulo %}
+
+{% block contenido %}
+    <h2>Agregar sucursal</h2>
+    <form method="post" action="">
+        {% csrf_token %}
+        <p>Número de Sucursal <input type="number" name="numero_sucursal" id="numero_sucursal"> </p>
+        <p>Ciudad <input type="text" name="ciudad" id="ciudad"> </p>
+        <p>Metros Cuadrados <input type="number" name="metros_cuadrados" id="metros_cuadrados"> </p>
+        <input type="submit" value="Grabar">
+
+    </form>
+</body>
+</html>
+{% endblock contenido %}
